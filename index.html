@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Web doaction</title>
+        <link rel="stylesheet" href="estilo.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quattrocento|Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h4 onclick="voltar()">Doação Online</h4>
+            </div>
+                
+            <div class="but-admin" id="but-invi">
+                <button onclick="admin()">Administrador</button>
+            </div>
+            
+
+        </header>
+
+    <div class="visivel" id="mostrando">
+        <main>
+            <section class="container">
+
+                <div class="intro">
+
+                    <div class="texto-intro">
+                        <h1>Faça sua parte</h1>
+                        <p>
+                            Faça agora sua parte doando online nesse site
+                        </p>
+                    </div>
+
+                    <div class="cover">
+                        <img src="camiseta-test.png">
+                        <img src="short-test.png">
+                        <img src="tenis-test.png">
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <main>
+            <section class="conteiner-t">
+                
+                    <div class="form">
+                            <h4 class="titulo">Contribua aqui</h4>
+
+                            <div class="form-container">
+
+                                <label>Opções</label>
+
+                                <p>Roupas  <input class="put" type="radio" name="box" value="roupas"></p>
+                                <p>Calçados<input class="put" type="radio" name="box" value="calcados"></p>
+
+                                <label>Tipo da peça</label>
+                                <input class="put" type="text" id="tipo">
+
+                                <label>Quantidade de peças</label>
+                                <input class="put" type="number" id="quantidade">
+
+                                <label>Tamanho</label>
+                                <input class="put" type="text" id="tamanho">
+
+                                <p><label>Nome Completo</label></p>
+                                <input class="put" type="text" id="nome">
+                                    
+                                <p><label>Endereço</label></p>
+                                <input class="put" type="text" id="cep">
+
+                                <input class ="no-interaction-put" type="text" id="alert" disabled>
+            
+                                <div class="btu">
+                                    <button class="but-select" onclick="enviar()">Contribuir</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+            </section>
+        </main>
+
+        <main>
+                <section class="container-d">
+
+                    <div class="action">
+                    
+                        <div class="junction">
+                            <div>
+                                <input class="no-interaction" type="number" id="result" disabled>
+                            </div>
+                            
+                            <div class="texto-doacao">
+                                <h1>DOAÇÕES</h1>
+                            </div>
+
+                        </div>  
+
+                    </div>
+                
+                </section>
+            </main>
+        </div>
+
+        
+        <div class="invisivel" id='admin'>
+
+            <label>CPF do Administrador</label>
+            <p><input type="number" id ='cpf_admin'></p>
+            <button class="but-man" onclick="entrar(cpf_admin.value)">Entrar</button>
+    
+        </div>
+
+        <div class="invisivel" id="busca">
+
+                <h1>Buscar Doação</h1>
+
+                <label>N da doação</label>
+                <p><input class="put-doa" type="number" id="n_doa"></p>
+
+                <div class="btu">
+                    <button class="but-op" onclick="buscar()">Buscar</button>
+                </div>
+
+                <div class="invisivel" id="resul">
+                    <h1>Doação</h1>
+
+                        <label>Tipo da peça</label>
+                        <input class="no-interaction-put" type="text" id="Atipo">
+
+                        <label>Quantidade de peças</label>
+                        <input class="no-interaction-put" type="number" id="Aquantidade">
+
+                        <label>Tamanho</label>
+                        <input class="no-interaction-put" type="text" id="Atamanho">
+
+                        <p><label>Nome Completo</label></p>
+                        <input class="no-interaction-put" type="text" id="Anome">
+                                    
+                        <p><label>Endereço</label></p>
+                        <input class="no-interaction-put" type="text" id="Acep">
+
+                        <p><button class="but-op" onclick="doar()">Doar</button></p>
+                </div>
+    
+
+        <script src="codigo.js"></script>
+
+    </body>
+</html>
